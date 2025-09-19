@@ -1,0 +1,84 @@
+/* Generel styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+h1, p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Galleri grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  padding: 40px 20px;
+  text-align: center;
+  overflow: auto;
+}
+
+.lightbox:target {
+  display: block;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 70vh;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.caption {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+/* Luk-knap */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #ff4444;
+}
